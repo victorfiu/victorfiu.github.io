@@ -1,12 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copiar E-mail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        #email {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #444;
+        }
+        button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <p>Clique no botão para copiar o e-mail:</p>
-    <p id="email">nataljunior08@hotmail.com</p>
-    <button onclick="copyToClipboard()">Copiar E-mail</button>
+    <div class="container">
+        <h1>Obrigado por sua generosidade!</h1>
+        <p>Clique no botão abaixo para copiar a chave pix:</p>
+        <p id="email">nataljunior08@hotmail.com</p>
+        <button onclick="copyToClipboard()">Copiar chave pix e-mail</button>
+    </div>
+
     <script>
         function copyToClipboard() {
             const email = document.getElementById('email').textContent;
