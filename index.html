@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Copiar E-mail</title>
+</head>
+<body>
+    <p>Clique no botão para copiar o e-mail:</p>
+    <p id="email">nataljunior08@hotmail.com</p>
+    <button onclick="copyToClipboard()">Copiar E-mail</button>
+    <script>
+        function copyToClipboard() {
+            const email = document.getElementById('email').textContent;
+            navigator.clipboard.writeText(email).then(() => {
+                alert('E-mail copiado para a área de transferência!');
+            }).catch(err => {
+                console.error('Erro ao copiar:', err);
+            });
+        }
+    </script>
+</body>
+</html>
